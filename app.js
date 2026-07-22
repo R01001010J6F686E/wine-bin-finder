@@ -17,7 +17,9 @@ fetch("wines.json")
     });
 
 // Search functionality
-document.getElementById("search").addEventListener("input", function() {
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("input", function() {
     let q = this.value.trim().toLowerCase();
     const resultsDiv = document.getElementById("results");
     
@@ -57,4 +59,11 @@ document.getElementById("search").addEventListener("input", function() {
             </div>
         `;
     });
+});
+
+// Hide keyboard on Return key
+searchInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        this.blur();
+    }
 });
