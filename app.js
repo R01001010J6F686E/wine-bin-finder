@@ -41,7 +41,7 @@ document.getElementById("search").addEventListener("input", function() {
     }
 
     if (matches.length > 20) {
-        resultsDiv.innerHTML = "<h3>Too many matches. Refine search.</h3>";
+        // Show nothing if more than 20 matches
         return;
     }
 
