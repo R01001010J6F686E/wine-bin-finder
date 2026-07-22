@@ -16,31 +16,46 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>🍷 Wine BIN Finder</h1>
-            <p>Discover wines by BIN number or name</p>
+    <div class="grape-decoration grape-left"></div>
+    <div class="grape-decoration grape-right"></div>
+    
+    <main class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="wine-icon">🍷</span>
+                    Wine BIN Finder
+                </h1>
+                <p class="subtitle">Discover premium wines by BIN number or name</p>
+            </div>
         </header>
 
-        <section>
-            <label for="search">Search Wines:</label>
-            <input
-                type="text"
-                id="search"
-                placeholder="Enter BIN number or wine name..."
-                aria-label="Search wines by BIN or name"
-                autocomplete="off"
-            >
+        <section class="search-section">
+            <div class="search-wrapper">
+                <label for="search" class="search-label">🔍 Find Your Wine</label>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Enter BIN number or wine name..."
+                    aria-label="Search wines by BIN or name"
+                    autocomplete="off"
+                    class="search-input"
+                >
+            </div>
         </section>
 
-        <section id="results" role="region" aria-live="polite" aria-label="Search results">
-            <p id="no-results-message" style="display: none;">No wines found. Try another search.</p>
+        <section id="results" role="region" aria-live="polite" aria-label="Search results" class="results-section">
+            <p id="no-results-message" style="display: none;" class="no-results">No wines found. Try another search.</p>
         </section>
 
         <noscript>
-            <p><strong>JavaScript is required for this application to work.</strong></p>
+            <p class="noscript-message"><strong>⚠️ JavaScript is required for this application to work.</strong></p>
         </noscript>
     </main>
+
+    <footer class="footer">
+        <p>🍇 Discover the perfect wine for every occasion</p>
+    </footer>
 
     <script src="app.js" defer></script>
 </body>
