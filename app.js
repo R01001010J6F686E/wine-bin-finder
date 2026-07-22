@@ -13,7 +13,7 @@ fetch("wines.json")
     .catch(error => {
         console.error("Failed to load wines.json:", error);
         document.getElementById("results").innerHTML = 
-            "<p style='color: red;'>Error loading wine data. Please refresh the page.</p>";
+            "<p style='color: #722f37;'>Error loading wine data. Please refresh the page.</p>";
     });
 
 // Search functionality
@@ -51,9 +51,8 @@ document.getElementById("search").addEventListener("input", function() {
                 <div class="bin">${w.BIN}</div>
                 <div>${w.Description}</div>
                 <div>
-                    Price: $${w.Price}
-                    &nbsp;&nbsp;
-                    Cost: $${w.Cost}
+                    <span>💰 Price: $${w.Price}</span>
+                    <span>📊 Cost: $${w.Cost}</span>
                 </div>
             </div>
         `;
