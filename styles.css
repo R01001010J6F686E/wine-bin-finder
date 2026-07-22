@@ -151,6 +151,17 @@ noscript p {
     font-weight: 500;
 }
 
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.footer p {
+    font-size: 0.65rem;
+    color: #999;
+}
+
 @media (max-width: 600px) {
     body {
         padding: 20px 15px;
