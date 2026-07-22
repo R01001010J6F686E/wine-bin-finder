@@ -1,0 +1,25 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    font-size: 20px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.result {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bin {
+    font-size: 20px;
+    font-weight: bold;
+}
