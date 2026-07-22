@@ -31,8 +31,8 @@ document.getElementById("search").addEventListener("input", function() {
     }
 
     let matches = wines.filter(w =>
-        w.name.toLowerCase().includes(q) || 
-        w.bin.toString().includes(q)
+        w.Description.toLowerCase().includes(q) || 
+        w.BIN.toString().includes(q)
     );
 
     if (matches.length === 0) {
@@ -48,12 +48,12 @@ document.getElementById("search").addEventListener("input", function() {
     matches.forEach(w => {
         resultsDiv.innerHTML += `
             <div class="result">
-                <div class="bin">${w.bin}</div>
-                <div>${w.name}</div>
+                <div class="bin">${w.BIN}</div>
+                <div>${w.Description}</div>
                 <div>
-                    Price: $${w.price}
+                    Price: $${w.Price}
                     &nbsp;&nbsp;
-                    Cost: $${w.cost}
+                    Cost: $${w.Cost}
                 </div>
             </div>
         `;
