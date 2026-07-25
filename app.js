@@ -86,6 +86,7 @@ searchInput.addEventListener("input", function() {
                     <span>💰 Price: $${w.Price}</span>
                     <span>📊 Cost: $${w.Cost}</span>
                 </div>
+                <button onclick="openPdfModal('pdf/${w.BIN}.pdf')" style="margin-top: 10px; padding: 8px 16px; background-color: #722f37; color: white; border: none; border-radius: 4px; cursor: pointer;">📄 View Details</button>
             </div>
         `;
     });
