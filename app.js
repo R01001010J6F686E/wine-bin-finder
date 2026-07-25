@@ -82,11 +82,11 @@ searchInput.addEventListener("input", function() {
             <div class="result">
                 <div class="bin">${w.BIN}</div>
                 <div>${w.Description}</div>
-                <div>
+                <div class="result-details">
                     <span>💰 Price: $${w.Price}</span>
                     <span>📊 Cost: $${w.Cost}</span>
+                    <button onclick="openPdfModal('pdf/${w.BIN}.pdf')" class="view-details-btn">View Details</button>
                 </div>
-                <button onclick="openPdfModal('pdf/${w.BIN}.pdf')" style="margin-top: 10px; padding: 8px 16px; background-color: #722f37; color: white; border: none; border-radius: 4px; cursor: pointer;">📄 View Details</button>
             </div>
         `;
     });
