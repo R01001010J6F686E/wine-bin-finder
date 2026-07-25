@@ -19,6 +19,7 @@ fetch("wines.json")
 // PDF Modal functionality
 const pdfModal = document.getElementById("pdf-modal");
 const pdfIframe = document.getElementById("pdf-iframe");
+const closePdfBtn = document.getElementById("close-pdf-btn");
 
 // Open PDF modal
 function openPdfModal(pdfUrl) {
@@ -32,12 +33,8 @@ function closePdfModal() {
     pdfIframe.src = "";
 }
 
-// Close modal when clicking on the dark overlay
-pdfModal.addEventListener("click", function(e) {
-    if (e.target === pdfModal) {
-        closePdfModal();
-    }
-});
+// Close modal when clicking the close button
+closePdfBtn.addEventListener("click", closePdfModal);
 
 // Close modal on Escape key
 document.addEventListener("keydown", function(e) {
