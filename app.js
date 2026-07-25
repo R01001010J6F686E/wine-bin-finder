@@ -16,6 +16,36 @@ fetch("wines.json")
             "<p style='color: #722f37;'>Error loading wine data. Please refresh the page.</p>";
     });
 
+// PDF Modal functionality
+const pdfModal = document.getElementById("pdf-modal");
+const pdfIframe = document.getElementById("pdf-iframe");
+
+// Open PDF modal
+function openPdfModal(pdfUrl) {
+    pdfIframe.src = pdfUrl;
+    pdfModal.classList.add("active");
+}
+
+// Close PDF modal
+function closePdfModal() {
+    pdfModal.classList.remove("active");
+    pdfIframe.src = "";
+}
+
+// Close modal when clicking on the dark overlay
+pdfModal.addEventListener("click", function(e) {
+    if (e.target === pdfModal) {
+        closePdfModal();
+    }
+});
+
+// Close modal on Escape key
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+        closePdfModal();
+    }
+});
+
 // Search functionality
 const searchInput = document.getElementById("search");
 
