@@ -34,7 +34,9 @@ function closePdfModal() {
 }
 
 // Close modal when clicking the close button
-closePdfBtn.addEventListener("click", closePdfModal);
+if (closePdfBtn) {
+    closePdfBtn.addEventListener("click", closePdfModal);
+}
 
 // Close modal on Escape key
 document.addEventListener("keydown", function(e) {
