@@ -23,7 +23,7 @@ const closePdfBtn = document.getElementById("close-pdf-btn");
 
 // Open PDF modal
 function openPdfModal(pdfUrl) {
-    pdfIframe.src = pdfUrl;
+    pdfIframe.src = pdfUrl + "#toolbar=0";
     pdfModal.classList.add("active");
 }
 

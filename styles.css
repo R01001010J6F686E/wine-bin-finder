@@ -218,27 +218,29 @@ noscript p {
 
 .close-pdf-btn {
     position: absolute;
-    top: -40px;
+    top: -45px;
     right: 0;
     width: 40px;
     height: 40px;
     background: white;
-    border: none;
+    border: 2px solid #722f37;
     border-radius: 50%;
-    font-size: 24px;
-    color: #333;
+    font-size: 28px;
+    color: #722f37;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 1001;
+    font-weight: bold;
 }
 
-.close-pdf-btn:hover {
+.close-pdf-btn:hover,
+.close-pdf-btn:active {
     background: #722f37;
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 @media (max-width: 600px) {
@@ -279,9 +281,9 @@ noscript p {
     }
 
     .close-pdf-btn {
-        top: -35px;
+        top: -40px;
         width: 35px;
         height: 35px;
-        font-size: 20px;
+        font-size: 24px;
     }
 }
